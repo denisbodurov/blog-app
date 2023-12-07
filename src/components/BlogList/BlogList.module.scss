@@ -1,0 +1,39 @@
+@import '/src/variables.css';
+
+.root {
+
+    .blog {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 16px;
+        margin: 20px 0;
+        border-bottom: 1px solid #fafafa;
+
+        &:hover {
+            box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+        }
+
+    }
+    
+    .title {
+        font-size: 20px;
+        color: var(--background-color);
+        margin-bottom: 8px;
+    }
+
+    .delete {
+        padding: 5px 5px;
+        color: white;
+        background-color: red;
+        border-radius: 5px;
+        border: none;
+        align-self: flex-end;
+
+        &:hover {
+            transform: scale(1.05);
+            transition: all 0.3s;
+        }
+    }
+}
+

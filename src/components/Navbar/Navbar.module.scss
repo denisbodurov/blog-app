@@ -1,0 +1,41 @@
+.root {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    border-bottom: 1px solid #f2f2f2;
+  
+    .title {
+      color: #9935f1;
+    }
+  
+    .links {
+      margin-left: auto;
+    }
+
+    .create {
+        color: white !important;
+        background-color: #9935f1;
+        border: 1px #9935f1 solid;
+        border-radius: 8px;
+
+        &:hover{
+            color: #9935f1 !important;
+
+            background-color: white;
+            transition: all 0.3s;
+        }
+    }
+  
+    a {
+      margin-left: 16px;
+      text-decoration: none;
+      padding: 6px;
+  
+      &:hover {
+        color: #f1356d;
+      }
+    }
+  }
+  
