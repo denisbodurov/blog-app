@@ -1,21 +1,16 @@
-import { useState } from 'react'
-import style from './Home.module.scss'
-import BlogList from '../BlogList/BlogList'
+import style from './Home.module.scss';
+import EntryList from '../EntryList/EntryList';
+import useFetch from '../../hooks/useFetch';
 
-const Home = () => {
-    const [blogs, setBlogs] = useState([
-      { title: 'Meow', body: 'lorem ipsum...', author: 'Sonia', id: 1 },
-      { title: 'Sass is weird', body: 'lorem ipsum...', author: 'Denis', id: 2 },
-      { title: 'Bingus', body: 'lorem ipsum...', author: 'Aelx', id: 3 }
-    ])
+function Home() {
 
-    const handleDelete = (id:number) => {
-      const newBlogs = blogs.filter(blog => blog.id !== id);
-      setBlogs(newBlogs);
-    }
+  const { error, isPending, data: entries } = useFetch('http://localhost:8000/entries');
+
     return (
       <div className={style.root}>
-        <BlogList blogs={blogs} title="All Blogs" handleDelete={handleDelete} />
+        {error && <div>{ error }</div>}
+        {isPending && <div>Loading...</div>}
+        {entries && <EntryList entries={entries} title="All Entries"/>}
       </div>
     );
   }

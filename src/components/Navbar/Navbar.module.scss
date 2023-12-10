@@ -1,3 +1,5 @@
+@use '/src/variables.css';
+
 .root {
     padding: 20px;
     display: flex;
@@ -7,7 +9,7 @@
     border-bottom: 1px solid #f2f2f2;
   
     .title {
-      color: #9935f1;
+      color: var(--primary-color);
     }
   
     .links {
@@ -16,12 +18,12 @@
 
     .create {
         color: white !important;
-        background-color: #9935f1;
-        border: 1px #9935f1 solid;
+        background-color: var(--primary-color);
+        border: 1px var(--primary-color) solid;
         border-radius: 8px;
 
         &:hover{
-            color: #9935f1 !important;
+            color: var(--primary-color) !important;
 
             background-color: white;
             transition: all 0.3s;
@@ -34,7 +36,7 @@
       padding: 6px;
   
       &:hover {
-        color: #f1356d;
+        color: var(--primary-color);
       }
     }
   }
