@@ -1,9 +1,10 @@
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import EntryDetails from './components/EntryDetails/EntryDetails';
+import Create from './components/Create/Create';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Create from './components/Create/Create';
+
 
 function App() {
   return (

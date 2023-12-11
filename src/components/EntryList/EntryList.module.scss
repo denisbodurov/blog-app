@@ -1,14 +1,15 @@
 @import '/src/variables.css';
 
 .root {
-
-    .blog {
+    font-weight: bold;
+    
+    .entry {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-end;
         padding: 10px 16px;
         margin: 20px 0;
-        border-bottom: 1px solid #fafafa;
+        border-bottom: 1px solid #dedada;
 
         &:hover {
             box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
@@ -17,9 +18,10 @@
     }
     
     .title {
-        font-size: 20px;
-        color: var(--background-color);
+        font-size: 1.2em;
+        color: var(--primary-color);
         margin-bottom: 8px;
+        text-decoration: none;
     }
 
     .delete {

@@ -1,5 +1,7 @@
 .root{
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
+    .status{
+        color:cadetblue;
+        font-size: 2em;
+        text-align: center;
+    }
 }

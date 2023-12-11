@@ -2,17 +2,17 @@ import style from './Create.module.scss';
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const [title, setTitle] = useState<string>('');
-const [body, setBody] = useState<string>('');
-const navigate = useNavigate();
-
-
-
 function Create() {
+
+    const [title, setTitle] = useState<string>('');
+    const [body, setBody] = useState<string>('');
+    const date : string = new Date().toUTCString();
+    const author: string = 'Placeholder';
+    const navigate = useNavigate();
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
-        const entry = { title, body };
+        const entry = { title, body, author, date };
     
         await fetch('http://localhost:8000/entries/', {
           method: 'POST',
@@ -25,16 +25,16 @@ function Create() {
 
   return (
     <div className={style.root}>
-      <h2 className={style.title}>Add a New Blog</h2>
+      <h2 className={style.title}>Add a New Entry</h2>
       <form onSubmit={handleSubmit}>
-        <label className={style.label}>Blog title:</label>
+        <label className={style.label}>Entry title:</label>
         <input
           type="text" 
           required 
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
-        <label>Blog body:</label>
+        <label className={style.label}>Entry body:</label>
         <textarea
           required
           value={body}
