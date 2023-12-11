@@ -13,4 +13,4 @@ function Navbar (props:any) {
     );
 }
 
-  export default Navbar;
+export default Navbar;

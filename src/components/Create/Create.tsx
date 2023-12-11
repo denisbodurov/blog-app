@@ -1,3 +1,4 @@
+import style from './Create.module.scss';
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -9,11 +10,11 @@ const navigate = useNavigate();
 
 function Create() {
 
-    function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
         const entry = { title, body };
     
-        fetch('http://localhost:8000/entries/', {
+        await fetch('http://localhost:8000/entries/', {
           method: 'POST',
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(entry)
@@ -23,11 +24,11 @@ function Create() {
     }
 
   return (
-    <div className="create">
-      <h2>Add a New Blog</h2>
+    <div className={style.root}>
+      <h2 className={style.title}>Add a New Blog</h2>
       <form onSubmit={handleSubmit}>
-        <label>Blog title:</label>
-        <input 
+        <label className={style.label}>Blog title:</label>
+        <input
           type="text" 
           required 
           value={title}
@@ -39,7 +40,7 @@ function Create() {
           value={body}
           onChange={(e) => setBody(e.target.value)}
         ></textarea>
-        <button>Add Entry</button>
+        <button className={style.add}>Add Entry</button>
       </form>
     </div>
   );

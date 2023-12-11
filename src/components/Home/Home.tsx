@@ -2,9 +2,9 @@ import style from './Home.module.scss';
 import EntryList from '../EntryList/EntryList';
 import useFetch from '../../hooks/useFetch';
 
-function Home() {
+const { error, isPending, data: entries } = useFetch('http://localhost:8000/entries');
 
-  const { error, isPending, data: entries } = useFetch('http://localhost:8000/entries');
+function Home() {
 
     return (
       <div className={style.root}>
