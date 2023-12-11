@@ -7,7 +7,7 @@ function Create() {
     const [title, setTitle] = useState<string>('');
     const [body, setBody] = useState<string>('');
     const date : string = new Date().toUTCString();
-    const author: string = 'Placeholder';
+    const author: string = 'Sonia';
     const navigate = useNavigate();
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -27,20 +27,20 @@ function Create() {
     <div className={style.root}>
       <h2 className={style.title}>Add a New Entry</h2>
       <form onSubmit={handleSubmit}>
-        <label className={style.label}>Entry title:</label>
+        <label className={style.label}>Dream title</label>
         <input
           type="text" 
           required 
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
-        <label className={style.label}>Entry body:</label>
+        <label className={style.label}>Dream description</label>
         <textarea
           required
           value={body}
           onChange={(e) => setBody(e.target.value)}
         ></textarea>
-        <button className={style.add}>Add Entry</button>
+        <button className={style.add}>Add Dream</button>
       </form>
     </div>
   );
