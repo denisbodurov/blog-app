@@ -1,6 +1,6 @@
 import style from './EntryDetails.module.scss';
 import { useNavigate, useParams } from "react-router-dom";
-import useFetch from "../../hooks/useFetch";
+import useFetch from "../../utils/hooks/useFetch";
 
 
 

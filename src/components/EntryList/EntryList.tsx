@@ -1,19 +1,8 @@
 import style from './EntryList.module.scss';
 import { Link }  from 'react-router-dom';
+import { IEntryList } from '../../types/components/Entry';
 
-interface Entry {
-  id: number;
-  title: string;
-  author: string;
-  date: string;
-}
-
-interface EntryListProps {
-  entries: Entry[];
-  title: string;
-}
-
-function EntryList ({ entries, title} : EntryListProps) {
+function EntryList ({ entries, title} : IEntryList) {
   return (
     <div className={style.root}>
       <h2>{title}</h2>
