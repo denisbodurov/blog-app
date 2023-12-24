@@ -1,54 +1,54 @@
-@use '/src/variables.css';
+@use "/src/variables.css";
 
 .root {
-    max-width: 400px;
-    margin: 0 auto;
-    text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: bold;
+
+  .label {
+    text-align: left;
+    display: block;
+  }
+
+  .title {
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+  }
+  input,
+  textarea,
+  select {
+    width: 100%;
+    padding: 6px 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: block;
+    color: #000;
+    font-size: 1.2em;
     font-weight: bold;
+  }
 
-    .label {
-        text-align: left;
-        display: block;
-    }
+  textarea {
+    height: 150px;
+  }
 
-    .title {
-        font-size: 2em;
-        color: var(--primary-color);
-        margin-bottom: 30px;
-    }
-    input, textarea, select {
-        width: 100%;
-        padding: 6px 10px;
-        margin: 10px 0;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        box-sizing: border-box;
-        display: block;
-        color: #000;
-        font-size: 1.2em;
-        font-weight: bold;
-    }
+  .add {
+    background: var(--primary-color);
+    color: #fff;
+    border: 0;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s;
 
-    textarea{
-        height: 150px;
+    &:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+      transition: all 0.3s;
     }
-
-    .add {
-        background: var(--primary-color);
-        color: #fff;
-        border: 0;
-        padding: 10px;
-        font-size: 1.2em;
-        font-weight: bold;
-        border-radius: 8px;
-        transition: all 0.3s;
-        
-        &:hover {
-            transform: scale(1.05);
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-    }
+  }
 }
-  

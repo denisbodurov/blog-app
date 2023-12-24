@@ -1,41 +1,39 @@
-@import '/src/variables.css';
+@import "/src/variables.css";
 
 .root {
-    font-weight: bold;
-    
-    .entry {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        padding: 10px 16px;
-        margin: 20px 0;
-        border-bottom: 1px solid #dedada;
+  font-weight: bold;
 
-        &:hover {
-            box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
-        }
+  .entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px 16px;
+    margin: 20px 0;
+    border-bottom: 1px solid #dedada;
 
+    &:hover {
+      box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
     }
-    
-    .title {
-        font-size: 1.2em;
-        color: var(--primary-color);
-        margin-bottom: 8px;
-        text-decoration: none;
-    }
+  }
 
-    .delete {
-        padding: 5px 5px;
-        color: white;
-        background-color: red;
-        border-radius: 5px;
-        border: none;
-        align-self: flex-end;
+  .title {
+    font-size: 1.2em;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    text-decoration: none;
+  }
 
-        &:hover {
-            transform: scale(1.05);
-            transition: all 0.3s;
-        }
+  .delete {
+    padding: 5px 5px;
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+    border: none;
+    align-self: flex-end;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: all 0.3s;
     }
+  }
 }
-
